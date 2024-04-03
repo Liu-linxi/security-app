@@ -1,6 +1,6 @@
 <template>
 	<view class="child5">
-
+	5
 	</view>
 </template>
 
