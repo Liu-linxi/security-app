@@ -1,6 +1,6 @@
 <template>
 	<view class="child5">
-	5
+		5
 	</view>
 </template>
 
@@ -18,7 +18,5 @@
 </script>
 
 <style scoped lang="scss">
-	.child5 {
-		
-	}
+	.child5 {}
 </style>
