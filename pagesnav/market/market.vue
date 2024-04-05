@@ -40,7 +40,7 @@
 				height: 0,
 				activeIndex: 0,
 				headerBool: 0,
-				componentList: [child1, child2,child3,child4,child5,,child6,]
+				componentList: [child1, child2,child3,child4,child5,child6]
 			};
 		},
 		async onLoad() {
