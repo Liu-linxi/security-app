@@ -12,7 +12,7 @@
 				//您可以通过修改 config-ucharts.js 文件中下标为 ['column'] 的节点来配置全局默认参数，如都是默认参数，此处可以不传 opts 。实际应用过程中 opts 只需传入与全局默认参数中不一致的【某一个属性】即可实现同类型的图表显示不同的样式，达到页面简洁的需求。
 				opts: {
 					color: ["#d4322c", "#6abe6e"],
-					padding: [15, 10, 20, 10],
+					padding: [15, 20, 20, 20],
 					// dataLabel: false,
 					dataPointShape: false,
 					enableScroll: false,
@@ -21,6 +21,7 @@
 					},
 					xAxis: {
 						// disabled: true,
+						// disableGrid: true
 					},
 					yAxis: {
 						disabled: true,
