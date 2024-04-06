@@ -35,13 +35,13 @@
 					selectedBackgroundColor: ' rgba(212 ,50, 44, 0.3)',
 					selectedBorder: '1px  rgba(212 ,50, 44, 0.3) solid'
 				},
-				current:0,
+				current: 0,
 			}
 		},
 		methods: {
-change(e) {
-			this.current = e.detail.current;
-		}
+			change(e) {
+				this.current = e.detail.current;
+			}
 		}
 	}
 </script>
