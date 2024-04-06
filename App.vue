@@ -16,5 +16,8 @@
 <style lang="scss">
 	@import "@/common/base.css";
 	@import "@/uni_modules/uview-ui/index.scss";
-	@import "@/common/common.css"
+	@import "@/common/common.css";
+	page{
+		background-color: #f6f6f6;
+	}
 </style>
