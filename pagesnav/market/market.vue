@@ -14,12 +14,15 @@
 				</swiper-item>
 			</swiper>
 		</template>
-
+		<template v-else>
+			<zixuan/>
+		</template>
 	</view>
 </template>
 
 <script>
 	import rowHeader from './components/row-header.vue';
+	import zixuan from './zixuan/zixuan.vue';
 	import rowTabs from './components/row-tabs.vue';
 	import child1 from './child1/child1.vue';
 	import child2 from './child2/child2.vue';
@@ -30,6 +33,7 @@
 	export default {
 		components: {
 			rowHeader,
+			zixuan,
 			rowTabs,
 			child1,
 			child2,
@@ -71,14 +75,14 @@
 </script>
 
 <style scoped lang="scss">
-	.position-fixed{
+	.position-fixed {
 		width: 100rpx;
 		height: 100rpx;
 		border-radius: 50%;
-		right:20rpx;
+		right: 20rpx;
 		bottom: 50rpx;
 		background-color: #ffffff;
-		box-shadow: 0 0 20rpx  #CCCCCC;
+		box-shadow: 0 0 20rpx #CCCCCC;
 		transform: rotate(180deg);
 		display: flex;
 		align-items: center;
