@@ -5,8 +5,11 @@
 			<row-tabs :activeIndex="activeIndex" @changeActive="changeActive" />
 			<swiper :current="activeIndex" @change="animationfinish" :style="{height:`${height}px`}">
 				<swiper-item class="swiper-item" v-for="(item, index) in componentList" :key="index">
-					<scroll-view scroll-y :style="{height:`${height}px`}" @scrolltolower="onreachBottom">
+					<scroll-view scroll-y :style="{height:`${height}px`}" @scrolltolower="onreachBottom" @scroll="comHeight" :scroll-top="scollTop">
 						<component :is="item" />
+						<view class="position-fixed" v-if="4&&scollTop>300" @click="scollTop=0">
+							<u-icon name="download" color="#c2c2c2" size="26"></u-icon>
+						</view>
 					</scroll-view>
 				</swiper-item>
 			</swiper>
@@ -40,7 +43,8 @@
 				height: 0,
 				activeIndex: 0,
 				headerBool: 0,
-				componentList: [child1, child2,child3,child4,child5,child6]
+				componentList: [child1, child2, child3, child4, child5, child6],
+				scollTop: 0,
 			};
 		},
 		async onLoad() {
@@ -58,10 +62,26 @@
 				let current = e.detail.current;
 				this.activeIndex = current;
 			},
-			onreachBottom() {}
+			onreachBottom() {},
+			comHeight(e) {
+				this.scollTop = e.detail.scrollTop;
+			}
 		}
 	};
 </script>
 
 <style scoped lang="scss">
+	.position-fixed{
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 50%;
+		right:20rpx;
+		bottom: 50rpx;
+		background-color: #ffffff;
+		box-shadow: 0 0 20rpx  #CCCCCC;
+		transform: rotate(180deg);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 </style>
