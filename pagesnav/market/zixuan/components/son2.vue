@@ -6,7 +6,7 @@
 					<view class="height-item d-flex a-center font-sm gray">
 						编辑<image src="" style="width: 40rpx;height: 40rpx; vertical-align: text-bottom;" class="bg-red ml-1" mode=""></image>
 					</view>
-					<view class="height-item" v-for="li in 13">
+					<view class="height-item" v-for="li in 13"  @click="toshare">
 						<view class="">
 							阿松大水
 						</view>
@@ -29,9 +29,9 @@
 									涨幅
 								</view>
 							</view>
-							<view class="grid2" v-for="li in 13">
+							<view class="grid2" v-for="li in 13" @click="toshare">
 								<view class="height-item">
-									<echars-block/>
+									<echars-block />
 								</view>
 								<view class="height-item">
 									<view class="" style="height: 10rpx;"></view>
@@ -43,7 +43,7 @@
 									</view>
 								</view>
 							</view>
-							
+
 						</scroll-view>
 					</swiper-item>
 					<swiper-item>
@@ -52,7 +52,7 @@
 						</scroll-view>
 					</swiper-item>
 				</swiper>
-				
+
 
 			</view>
 		</view>
@@ -70,7 +70,7 @@
 		data() {
 			return {
 				height: 0,
-				scollTop:0,
+				scollTop: 0,
 			}
 		},
 		mounted() {
@@ -79,7 +79,11 @@
 			this.height = info.windowHeight - 130;
 		},
 		methods: {
-			rowClick() {},
+			toshare() {
+				uni.navigateTo({
+					url: "/pages/shareDetails/shareDetails"
+				})
+			},
 			comHeight(e) {
 				this.scollTop = e.detail.scrollTop;
 			}
@@ -102,17 +106,20 @@
 			vertical-align: middle;
 			border-bottom: 1rpx solid #dee2e6;
 		}
-		.grid2{
+
+		.grid2 {
 			display: grid;
 			grid-template-columns: 3fr 2fr;
 			grid-area: 20rpx;
 		}
-		.gray{
+
+		.gray {
 			color: #797979;
 		}
-		.btn{
+
+		.btn {
 			padding: 9rpx 0;
-			
+
 			margin: 0 20rpx;
 		}
 	}

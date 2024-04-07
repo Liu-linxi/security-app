@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar left-icon="left" fixed :border="false" leftWidth="140rpx" rightWidth="140rpx" backgroundColor="#e72f2f" color="#FFFFFF">
+		<uni-nav-bar left-icon="left" fixed :border="false" leftWidth="140rpx" rightWidth="140rpx" backgroundColor="#e72f2f" color="#FFFFFF" @clickLeft="back">
 			<view class="center">
 				<u-icon name="play-left-fill" color="#ffffff" size="18" @click="dataChange(0)"></u-icon>
 				<view class="text-center">
@@ -50,6 +50,9 @@
 					icon: "none",
 					title: index ? "下一条数据" : "上一条数据"
 				})
+			},
+			back(){
+				uni.navigateBack()
 			}
 		}
 	};

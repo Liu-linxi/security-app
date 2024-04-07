@@ -180,6 +180,9 @@
 		methods: {
 			rowClick(row) {
 				console.log(row);
+				uni.navigateTo({
+					url:"/pages/shareDetails/shareDetails"
+				})
 			}
 		}
 	}
