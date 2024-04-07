@@ -22,6 +22,7 @@
 					xAxis: {
 						// disabled: true,
 						// disableGrid: true
+						axisLine:false,
 					},
 					yAxis: {
 						disabled: true,
