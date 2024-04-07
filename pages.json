@@ -19,8 +19,15 @@
 			"path": "pagesnav/transaction/transaction",
 			"style": {
 				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"pullToRefresh": {
+						"color": "#d4322c",
+						"style":"circle",
+						"offset": "44px"
+					}
+				}
 			}
 		},
 		{
