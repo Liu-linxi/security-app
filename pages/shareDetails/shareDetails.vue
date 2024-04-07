@@ -1,24 +1,32 @@
 <template>
 	<view class="">
-		<row-header />
-		<scroll-view scroll-y :style="{height:`${height}px`}" @scroll="comHeight" :scroll-top="scollTop">
-			<view class="" v-for="li in 100">
-				{{li}}
-			</view>
-		</scroll-view>
-
+		<row-header :current="current"/>
+		<uni-swiper-dot :info="[0,1]" :current="current" field="content">
+			<swiper class="swiper-box" @change="change" :style="{height:`${height}px`}">
+				<swiper-item>
+					<child1 :height="height" />
+				</swiper-item>
+				<swiper-item>
+					<child2 :height="height" />
+				</swiper-item>
+			</swiper>
+		</uni-swiper-dot>
 	</view>
 </template>
 
 <script>
 	import rowHeader from './components/row-header.vue';
+	import child1 from './components/child1.vue';
+	import child2 from './components/child2.vue';
 	export default {
 		components: {
 			rowHeader,
+			child1,
+			child2
 		},
 		data() {
 			return {
-				scollTop: 0,
+				current: 0,
 				height: 0
 			};
 		},
@@ -27,8 +35,9 @@
 			this.height = info.windowHeight - 44;
 		},
 		methods: {
-			comHeight(e) {
-				this.scollTop = e.detail.scrollTop;
+
+			change(e) {
+				this.current = e.detail.current;
 			}
 		}
 	}
