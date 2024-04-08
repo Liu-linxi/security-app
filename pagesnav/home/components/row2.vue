@@ -1,19 +1,19 @@
 <template>
 	<view class="row2">
-		<view class="" style="position: sticky;top: 44px;background-color: #ffffff;">
+		<view class="" style="position: sticky;top: 44px;background-color: #ffffff; z-index: 1;">
 			<row-tabs :activeIndex="activeIndex" @changeActive="changeActive" />
 		</view>
-		<view class="" v-for="(item,index) in 50">
-			{{item}}
-		</view>
+		<row3/>
 	</view>
 </template>
 
 <script>
 	import rowTabs from './row-tabs.vue';
+	import row3 from './row3/row3.vue';
 	export default {
 		components: {
-			rowTabs
+			rowTabs,
+			row3
 		},
 		props: {
 	
