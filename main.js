@@ -1,4 +1,3 @@
-
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
@@ -10,8 +9,13 @@ Vue.config.productionTip = false
 
 App.mpType = 'app'
 
+import store from './store'
+
+Vue.prototype.$store = store
+
 const app = new Vue({
-    ...App
+	store,
+	...App
 })
 app.$mount()
 // #endif
@@ -20,9 +24,9 @@ app.$mount()
 import { createSSRApp } from 'vue'
 import App from './App.vue'
 export function createApp() {
-  const app = createSSRApp(App)
-  return {
-    app
-  }
+	const app = createSSRApp(App)
+	return {
+		app
+	}
 }
 // #endif
