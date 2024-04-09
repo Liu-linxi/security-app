@@ -6,9 +6,11 @@
 		display: grid;
 		grid-template-columns: repeat($num,1fr);
 		grid-gap: 20rpx;
+		align-items: center;
 	}
 	@mixin grid-custom($num,$distan:20rpx) {
 		display: grid;
 		grid-template-columns: $num;
 		grid-gap:$distan;
+		align-items: center;
 	}
