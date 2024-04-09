@@ -14,7 +14,7 @@
 
 <script>
 	import topPanel from './top-panel.vue';
-	import child2Dibu from './child2-dibu.vue';
+	import child2Dibu from './child2-dibu/child2-dibu.vue';
 	export default {
 		props: ["height"],
 		components: {
