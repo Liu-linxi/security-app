@@ -1,7 +1,7 @@
 <template>
 	<view class="top-panel">
 		<view class="grid3 px-2" @click="topPopup=!topPopup">
-			<view class="d-flex a-center">
+			<view class="d-flex a-center text-nowrap">
 				<view class="red">
 					<view class="font36 font-weight">
 						3.23
@@ -23,24 +23,24 @@
 					</view>
 				</view>
 			</view>
-			<view class="text-right">
-				<view>
+			<view class="text-right pl-2 text-nowrap">
+				<view class="d-flex a-center j-sb">
 					<text class="red">2.33</text>
 					<text class="ml-2 gray-color mr-1">测试</text>
 					45%
 				</view>
-				<view>
+				<view class="d-flex a-center j-sb">
 					<text class="green">2.33</text>
 					<text class="ml-2 gray-color mr-1">测试</text>
 					34撒
 				</view>
-				<view>
+				<view class="d-flex a-center j-sb">
 					<text class="green">2.33</text>
 					<text class="ml-2 gray-color mr-1">测试</text>
-					34撒
+					34撒3212
 				</view>
 			</view>
-			<view class="">
+			<view class="text-nowrap">
 				<view class="d-flex a-center j-sb">
 					<view class="gray-color">测试</view>
 					<view class="red">2.33</view>
@@ -142,6 +142,9 @@
 <style lang="scss" scoped>
 	.top-panel {
 		background-color: #f2f1ef;
+		.grid3{
+			grid-template-columns: 1fr 2fr 1fr;
+		}
 		.popupTips{
 			background-color: #FFFFFF;
 			width: 80vw;
