@@ -1,2 +1,14 @@
 @import '@/uni_modules/uni-scss/variables.scss';
 @import '@/uni_modules/uview-ui/theme.scss';
+
+
+	@mixin grid-layout($num:4) {
+		display: grid;
+		grid-template-columns: repeat($num,1fr);
+		grid-gap: 20rpx;
+	}
+	@mixin grid-custom($num,$distan:20rpx) {
+		display: grid;
+		grid-template-columns: $num;
+		grid-gap:$distan;
+	}

@@ -24,7 +24,7 @@
 				"app-plus": {
 					"pullToRefresh": {
 						"color": "#d4322c",
-						"style":"circle",
+						"style": "circle",
 						"offset": "44px"
 					}
 				}
@@ -53,10 +53,18 @@
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/trade/trade",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#e72f2f",
 		"backgroundColor": "#F8F8F8",
