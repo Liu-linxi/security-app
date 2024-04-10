@@ -2,93 +2,93 @@
 	"pages": [{
 			"path": "pagesnav/home/home",
 			"style": {
-				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pagesnav/market/market",
 			"style": {
-				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pagesnav/transaction/transaction",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": true,
-				"navigationStyle": "custom",
 				"app-plus": {
 					"pullToRefresh": {
 						"color": "#d4322c",
-						"style": "circle",
-						"offset": "44px"
+						"offset": "44px",
+						"style": "circle"
 					}
-				}
+				},
+				"enablePullDownRefresh": true,
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pagesnav/financing/financing",
 			"style": {
-				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pagesnav/mine/mine",
 			"style": {
-				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pages/shareDetails/shareDetails",
 			"style": {
-				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pages/trade/trade",
 			"style": {
-				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pages/mockData/mockData",
 			"style": {
-				"navigationBarTitleText": "数据模拟",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "数据模拟"
 			}
 		},
 		{
 			"path": "pages/login1/login1",
 			"style": {
-				"navigationBarTitleText": "注册登录",
 				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "注册登录",
 				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pages/login/login",
 			"style": {
-				"navigationBarTitleText": "委托登录",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "委托登录"
 			}
 		},
 		{
 			"path": "pages/account-analysis/account-analysis",
 			"style": {
-				"navigationBarTitleText": "账户分析",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "账户分析"
 			}
 		}
 	],
@@ -117,17 +117,20 @@
 				"iconPath": "static/api.png",
 				"selectedIconPath": "static/apiHL.png",
 				"text": "行情"
-			}, {
+			},
+			{
 				"pagePath": "pagesnav/transaction/transaction",
 				"iconPath": "static/extui.png",
 				"selectedIconPath": "static/extuiHL.png",
 				"text": "交易"
-			}, {
+			},
+			{
 				"pagePath": "pagesnav/financing/financing",
 				"iconPath": "static/template.png",
 				"selectedIconPath": "static/templateHL.png",
 				"text": "理财"
-			}, {
+			},
+			{
 				"pagePath": "pagesnav/mine/mine",
 				"iconPath": "static/template.png",
 				"selectedIconPath": "static/templateHL.png",
