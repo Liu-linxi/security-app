@@ -71,6 +71,21 @@
 				colArray: ["10分钟", "30分钟", "60分钟", "180分钟"]
 			}
 		},
+		onShow() {
+			uni.showModal({
+				content: "检测到未登录",
+				success(res) {
+					if (res.confirm) {
+						// 数据对接判断后自动导航过去
+						uni.navigateTo({
+							url: "/pages/login1/login1"
+						})
+					}
+
+
+				}
+			})
+		},
 		methods: {
 			confirm({ indexs }) {
 				this.colIndex = indexs[0];
