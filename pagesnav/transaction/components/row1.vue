@@ -24,7 +24,7 @@
 					<view class="">
 						总资产 <text class="font-lg font-weight ml-1">￥10000.00</text>
 					</view>
-					<view class="redbtn">
+					<view class="redbtn" @click="toAny">
 						账户分析
 					</view>
 				</view>
@@ -71,7 +71,11 @@
 			
 		},
 		methods:{
-			
+			toAny(){
+				uni.navigateTo({
+					url:"/pages/account-analysis/account-analysis"
+				})
+			}
 		}
 	}
 </script>
