@@ -14,6 +14,7 @@
 </script>
 
 <style lang="scss">
+	@import '@/uni_modules/uni-scss/index.scss';
 	@import "@/common/base.css";
 	@import "@/uni_modules/uview-ui/index.scss";
 	@import "@/common/common.css";
