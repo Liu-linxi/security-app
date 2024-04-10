@@ -1,40 +1,56 @@
-.font22{
+.font22 {
 	font-size: 22rpx;
 }
-.font24{
+
+.font24 {
 	font-size: 24rpx;
 }
-.font26{
+
+.font26 {
 	font-size: 26rpx;
 }
-.font28{
+
+.font28 {
 	font-size: 28rpx;
 }
-.font32{
+
+.font32 {
 	font-size: 32rpx;
 }
-.font36{
+
+.font36 {
 	font-size: 36rpx;
 }
-.red{
+
+.red {
 	color: #d4322c;
 }
-.green{
+
+.blue {
+	color: #498cdb;
+}
+
+.green {
 	color: #6abe6e;
 }
-.gray{
+
+.gray {
 	color: #c2c2c2;
 }
-.bg-red{
+
+.bg-red {
 	background-color: #d4322c;
 }
-.bg-green{
+
+.bg-green {
 	background-color: #6abe6e;
 }
-.font-weight{
+
+.font-weight {
 	font-weight: bold;
 }
-.flex-c-b{
+
+.flex-c-b {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -48,18 +64,20 @@ page {
 	/* font-family: 'PingFangSC-Medium'; */
 }
 
-.shadow{
+.shadow {
 	box-shadow: 0rpx 0rpx 2rpx 10rpx rgba(0, 0, 0, 0.2);
 }
-.grid3{
+
+.grid3 {
 	display: grid;
-	grid-template-columns: repeat(3,1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 20rpx;
 	align-items: center;
 }
-.grid4{
+
+.grid4 {
 	display: grid;
-	grid-template-columns: repeat(4,1fr);
+	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 20rpx;
 	align-items: center;
 }
