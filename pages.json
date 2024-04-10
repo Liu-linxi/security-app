@@ -69,6 +69,23 @@
 				"navigationBarTitleText" : "数据模拟",
 				"enablePullDownRefresh" : false
 			}
+		},
+		{
+			"path" : "pages/login1/login1",
+			"style" : 
+			{
+				"navigationBarTitleText" : "注册登录",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/login/login",
+			"style" : 
+			{
+				"navigationBarTitleText" : "委托登录",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {
