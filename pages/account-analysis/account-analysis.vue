@@ -20,19 +20,19 @@
 			</view>
 		</u-sticky>
 		<row2 :name="list1[current].name" />
-		<view v-for="(item,index) in 78" :key="index">
-			{{item}}
-		</view>
+		<row3 />
 	</view>
 </template>
 
 <script>
 	import row1 from './components/row1.vue';
 	import row2 from './components/row2.vue';
+	import row3 from './components/row3.vue';
 	export default {
 		components: {
 			row1,
-			row2
+			row2,
+			row3
 		},
 		data() {
 			return {
