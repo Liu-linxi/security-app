@@ -3,7 +3,7 @@
 		<row1 />
 		<u-sticky bgColor="#fff">
 			<view class="border-bottom text-nowrap mt-2">
-				<u-tabs :list="list1" @click="clickCahnge" :current="current" lineColor="#d4322c" lineWidth="30" :scrollable="false"></u-tabs>
+				<u-tabs :list="list1" @click="clickCahnge" :current="current" lineColor="#d4322c" lineWidth="30"></u-tabs>
 			</view>
 			<view class="py-2" v-show="current==5">
 				<uni-datetime-picker type="daterange" v-model="single">
