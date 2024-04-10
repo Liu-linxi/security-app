@@ -53,7 +53,7 @@
 					<uni-icons type="closeempty" size="18" @click="$refs.popup.close()" color="#c2c2c2"></uni-icons>
 				</view>
 				<view class="grid4 text-center mt-3">
-					<view class="" v-for="(item,index) in 4">
+					<view class="" v-for="(item,index) in 4" @click="comPopClick(index)">
 						<image src="" style="width: 80rpx;height: 80rpx;" class="bg-red rounded-circle" mode=""></image>
 						<view class="">
 							测试1
@@ -61,16 +61,22 @@
 					</view>
 				</view>
 				<view class="grid2 py-2">
-					<button type="default" class="w-100" size="mini" style="borderColor:#c2c2c2;padding: 10rpx 0;"  plain="true">按钮按钮按钮</button>
-					<button @click="$refs.popup.close()" type="default" class="w-100" size="mini" style="borderColor:#c2c2c2;padding: 10rpx 0;"  plain="true">取消	</button>
+					<button type="default" class="w-100" size="mini" style="borderColor:#c2c2c2;padding: 10rpx 0;" plain="true">按钮按钮按钮</button>
+					<button @click="$refs.popup.close()" type="default" class="w-100" size="mini" style="borderColor:#c2c2c2;padding: 10rpx 0;" plain="true">取消 </button>
 				</view>
 			</view>
 		</uni-popup>
+
+		<mairu-maichu ref="maiPop" />
 	</view>
 </template>
 
 <script>
+	import mairuMaichu from './mairu-maichu.vue';
 	export default {
+		components: {
+			mairuMaichu
+		},
 		props: {
 
 		},
@@ -85,6 +91,19 @@
 
 		},
 		methods: {
+			comPopClick(index) {
+				switch (index) {
+					case 0:
+						this.$refs.maiPop.mariShow();
+						break;
+					case 1:
+						this.$refs.maiPop.mariShow(2)
+						break;
+					case 2:
+						this.$refs.maiPop.cumsShow()
+						break;
+				}
+			},
 			showPopup(index) {
 				switch (index) {
 					case 0:
@@ -113,9 +132,10 @@
 			padding-bottom: 30rpx;
 			border-radius: 30rpx 30rpx 0 0;
 			box-shadow: 0 0 10rpx #a2a2a2;
-			.grid2{
+
+			.grid2 {
 				display: grid;
-				grid-template-columns: repeat(2,1fr);
+				grid-template-columns: repeat(2, 1fr);
 				grid-gap: 20rpx;
 			}
 		}
