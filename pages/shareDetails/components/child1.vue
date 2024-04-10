@@ -1,8 +1,8 @@
 <template>
 	<view class="child1">
-		<scroll-view scroll-y="true" class="position-relative" :style="{height:`${height}px`}" @scroll="comHeight">
+		<scroll-view scroll-y="true" class="position-relative" :style="{height:`${height}px`}" @scroll="comHeight" :scroll-top="scrollTop">
 			<top-panel />
-			<view class="grid2" :style="{height:`${height-150}px`}">
+			<view class="grid2" :style="{height:`${height-250}px`}">
 				<view class="bg-red">
 					统计图
 				</view>
@@ -14,7 +14,7 @@
 							</view>
 						</view>
 						<template v-if="chaoosIndex==0">
-							<view class="d-flex flex-column" :style="{height:`${height-205}px`}">
+							<view class="d-flex flex-column" :style="{height:`${height-305}px`}">
 								<view class="flex-1 border-bottom d-flex flex-column j-sa">
 									<view class="grid3" v-for="li in 5">
 										<view class="">
@@ -44,7 +44,7 @@
 							</view>
 						</template>
 						<template v-else>
-							<scroll-view scroll-y="true" :style="{height:`${height-205}px`}">
+							<scroll-view scroll-y="true" :style="{height:`${height-305}px`}">
 								<view class="grid3" v-for="li in  30">
 									<view class="">
 										12:12
@@ -94,15 +94,21 @@
 			return {
 				chaoosData: ["阿萨", "阿的"],
 				chaoosIndex: 0,
+				scrollTop: 0,
 			}
 		},
 		mounted() {
-
+			uni.$on("scrollTopSon", (data) => {
+				this.scrollTop = data;
+			})
+		},
+		beforeDestroy() {
+			uni.$off("scrollTopSon")
 		},
 		methods: {
 			comHeight(e) {
 				let scollTop = e.detail.scrollTop;
-				 uni.$emit("scrollTopDEtail",scollTop)
+				uni.$emit("scrollTopDEtail", scollTop)
 			},
 		}
 	}

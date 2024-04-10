@@ -92,6 +92,7 @@
 		},
 		methods: {
 			comPopClick(index) {
+				uni.$emit("scrollTopSon",60)
 				switch (index) {
 					case 0:
 						this.$refs.maiPop.mariShow();

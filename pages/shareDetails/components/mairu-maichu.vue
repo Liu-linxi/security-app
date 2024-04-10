@@ -55,7 +55,7 @@
 
 
 		<uni-popup ref="cums" type="bottom" mask-background-color="rgba(0,0,0,0)">
-			<view class="popup p-3" style="min-height: 400rpx;">
+			<view class="popup p-3" style="min-height: 380rpx;">
 				<view class="d-flex a-center j-sb">
 					<view class="d-flex a-center">
 						<uni-icons type="left" size="18" @click="$refs.mairu.close()" color="#c2c2c2"></uni-icons>

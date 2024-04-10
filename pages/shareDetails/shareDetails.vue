@@ -32,6 +32,7 @@
 		},
 		onLoad() {
 			const info = uni.getWindowInfo();
+			console.log(info);
 			this.height = info.windowHeight - 44;
 		},
 		methods: {
