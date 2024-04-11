@@ -59,7 +59,7 @@
     "vueVersion" : "2",
     "h5" : {
         "devServer" : {
-            "port" : ""
+            "port" : 8888
         }
     }
 }

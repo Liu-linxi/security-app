@@ -21,6 +21,8 @@
 		</u-sticky>
 		<row2 :name="list1[current].name" />
 		<row3 />
+		<row4 :name="list1[current].name" />
+		<row5 />
 	</view>
 </template>
 
@@ -28,11 +30,15 @@
 	import row1 from './components/row1.vue';
 	import row2 from './components/row2.vue';
 	import row3 from './components/row3.vue';
+	import row4 from './components/row4.vue';
+	import row5 from './components/row5.vue';
 	export default {
 		components: {
 			row1,
 			row2,
-			row3
+			row3,
+			row4,
+			row5
 		},
 		data() {
 			return {

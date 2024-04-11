@@ -9,7 +9,7 @@
 				{{item}}
 			</view>
 		</view>
-		<row3-echars ref="echars"/>
+		<row3-echars ref="echars" />
 	</view>
 </template>
 
@@ -27,8 +27,10 @@
 		},
 		methods: {
 			changeCli(index) {
+				let txt = this.changeData[index];
+				uni.$emit("row4Change", txt)
 				this.changeIndex = index;
-				this.$refs.echars.changeData([0.2, -1.4, 0.7, -0.6,1.8, -1.4])
+				this.$refs.echars.changeData([0.2, -1.4, 0.7, -0.6, 1.8, -1.4])
 			}
 		}
 	}
