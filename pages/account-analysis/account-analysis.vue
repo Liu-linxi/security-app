@@ -23,6 +23,7 @@
 		<row3 />
 		<row4 :name="list1[current].name" />
 		<row5 />
+		<row6 />
 	</view>
 </template>
 
@@ -32,13 +33,15 @@
 	import row3 from './components/row3.vue';
 	import row4 from './components/row4.vue';
 	import row5 from './components/row5.vue';
+	import row6 from './components/row6.vue';
 	export default {
 		components: {
 			row1,
 			row2,
 			row3,
 			row4,
-			row5
+			row5,
+			row6
 		},
 		data() {
 			return {
