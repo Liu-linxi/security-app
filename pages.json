@@ -90,6 +90,14 @@
 				"enablePullDownRefresh": false,
 				"navigationBarTitleText": "账户分析"
 			}
+		},
+		{
+			"path" : "pages/lishiweituo/lishiweituo",
+			"style" : 
+			{
+				"navigationBarTitleText" : "历史委托",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {
