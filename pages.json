@@ -98,6 +98,14 @@
 				"navigationBarTitleText" : "历史委托",
 				"enablePullDownRefresh" : false
 			}
+		},
+		{
+			"path" : "pages/yiqingcanggupiao/yiqingcanggupiao",
+			"style" : 
+			{
+				"navigationBarTitleText" : "已清仓股票",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {
