@@ -1,0 +1,65 @@
+<template>
+	<view class="row7">
+		<view class=" bg-white px-4 pb-3">
+			<uni-calendar class="uni-calendar--hook" :selected="selected" :showMonth="false" @change="change" @monthSwitch="monthSwitch" />
+		
+			<view class="d-flex j-sb a-center text-light-muted my-2">
+				<view class="">
+					月累计收益：0。00元
+				</view>
+				<view class="">
+					沪深300:
+					<text class="green ml-2">-0.11%</text>
+				</view>
+			</view>
+			<view class="d-flex a-center j-center gray">
+				查看日对账账单<u-icon name="arrow-right-double" class="ml-2"></u-icon>
+			</view>
+		</view>
+		
+		<view class="text-light-muted p-3">
+			免责声明：
+			<view class="" style="text-indent: 2em;">
+				暗室逢灯咯改见识到了开个房间了开始对方了解到了第三方弗兰克没你说的分类科目
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	import uniCalendar from './components/uni-calendar/uni-calendar.vue';
+	export default {
+		components: {
+			uniCalendar
+		},
+		props: ["uniCalendar"],
+		data() {
+			return {
+				selected: [{
+					date: "2024-04-11",
+					info: '打卡',
+				}]
+			}
+		},
+		mounted() {
+
+		},
+		methods: {
+			change(e) {
+				console.log('change 返回:', e)
+				// 模拟动态打卡
+				this.selected.push({
+					date: e.fulldate,
+					info: '打卡'
+				})
+			},
+			monthSwitch(e) {
+				console.log('monthSwitchs 返回:', e)
+			}
+		}
+	}
+</script>
+
+<style lang="scss" scoped>
+	.row7 {}
+</style>
