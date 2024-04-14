@@ -1,6 +1,21 @@
 <template>
 	<view class="charts-box">
-		<qiun-data-charts type="line" :opts="opts" :chartData="chartData" />
+		<qiun-data-charts type="line" :opts="opts" :chartData="chartData" @getIndex="getIndex" />
+		<view class="cums font-sm" v-if="showSelect" :style="{top:`${posiEvent.y}px`,left:`${posiEvent.x}px`}">
+			<view class="font-sm  border-bottom gray">
+				{{categories[selectIndex]}}
+			</view>
+			<view class="grid3 font-sm gray text-nowrap">
+				<view></view>
+				<view>当日收益率</view>
+				<view>累计收益率</view>
+			</view>
+			<view class="grid3 font-sm gray" v-for="(li,index) in series">
+				<view :class="index==0?'red':'blue'">{{li.name}}</view>
+				<view class="text-center red">{{li.data[selectIndex]}}%</view>
+				<view class="text-center red">{{li.data[selectIndex]}}%</view>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -16,29 +31,46 @@
 					dataLabel: false,
 					dataPointShape: false,
 					enableScroll: false,
-					legend: {show:false},
+					legend: { show: false },
 					xAxis: {
 						disableGrid: true
 					},
 					yAxis: {
 						gridType: "dash",
 						dashLength: 8,
-						data:[{
-							axisLine:false,
-							unit:"%"
+						data: [{
+							axisLine: false,
+							unit: "%"
 						}]
 					},
 					extra: {
+						tooltip: {
+							showBox: false
+						},
 						line: {
 							type: "straight",
 							width: 2,
 							activeType: "solid",
 							onShadow: true,
 							animation: "horizontal",
-							
+
 						}
 					}
-				}
+				},
+
+				categories: ["2018", "2019", "2020", "2021", "2022", "2023"],
+				series: [{
+						name: "我的",
+						data: [0, 0, 0, 0, 0, 0]
+					},
+					{
+						name: "沪深",
+						data: [1.2, 0.4, 0.2, -0.6, 0, 2]
+					},
+				],
+				selectIndex: 0,
+				showSelect: false,
+				posiEvent: {}
 			};
 		},
 		mounted() {
@@ -50,23 +82,15 @@
 				setTimeout(() => {
 					//模拟服务器返回数据，如果数据格式和标准格式不同，需自行按下面的格式拼接
 					let res = {
-						categories: ["2018", "2019", "2020", "2021", "2022", "2023"],
-						series: [{
-								name: "我的",
-								data: [0, 0, 0, 0, 0, 0]
-							},
-							{
-								name: "沪深",
-								data: [1.2, 0.4, 0.2, -0.6, 0, 2]
-							},
-						]
+						categories: this.categories,
+						series: this.series
 					};
 					this.chartData = JSON.parse(JSON.stringify(res));
 				}, 500);
 			},
-			changeData(data){
+			changeData(data) {
 				let res = {
-					categories: ["2018", "2019", "2020", "2021", "2022", "2023"],
+					categories: this.categories,
 					series: [{
 							name: "我的",
 							data: [0, 0, 0, 0, 0, 0]
@@ -78,15 +102,38 @@
 					]
 				};
 				this.chartData = JSON.parse(JSON.stringify(res));
+			},
+			getIndex(e) {
+				let currentIndex = e.currentIndex.index;
+				this.selectIndex = currentIndex;
+				this.posiEvent = e.event;
+				let width = e.opts.width;
+				let cutWidth = width - e.event.x;
+				if (cutWidth < 180) this.posiEvent.x = e.event.x - 180
+				this.showSelect = true
+				console.log(e);
 			}
+
 		}
 	};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 	/* 请根据实际需求修改父元素尺寸，组件自动识别宽高 */
 	.charts-box {
 		width: 100%;
 		height: 300px;
+		position: relative;
+
+		.cums {
+			width: 180px;
+			position: absolute;
+			top: 129px;
+			left: 120px;
+			background-color: rgba(255, 255, 255, 0.93);
+			box-shadow: 0 0 50rpx #949494;
+			border-radius: 8rpx;
+			padding: 10rpx;
+		}
 	}
 </style>
