@@ -1,11 +1,6 @@
 <template>
 	<view class="row2 mx-2 mt-2">
-		<u-swiper :list="list5" @change="e => current = e.current" :autoplay="false">
-			<view slot="indicator" class="indicator">
-				<view class="indicator__dot" v-for="(item, index) in list5" :key="index" :class="[index === current && 'indicator__dot--active']">
-				</view>
-			</view>
-		</u-swiper>
+		
 	</view>
 </template>
 

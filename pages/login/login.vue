@@ -47,7 +47,7 @@
 			<view class="gray">
 				不是XX证券客户
 			</view>
-			<view class="blue">
+			<view class="blue" @click="toKiahu">
 				立即开户
 			</view>
 		</view>
@@ -91,6 +91,11 @@
 				this.colIndex = indexs[0];
 				this.show = false;
 				console.log(indexs);
+			},
+			toKiahu(){
+				uni.navigateTo({
+					url:"/pages/kaihu/kaihu",
+				})
 			}
 		}
 	}

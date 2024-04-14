@@ -106,6 +106,14 @@
 				"navigationBarTitleText" : "已清仓股票",
 				"enablePullDownRefresh" : false
 			}
+		},
+		{
+			"path" : "pages/kaihu/kaihu",
+			"style" : 
+			{
+				"navigationBarTitleText" : "新开户",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {
