@@ -114,6 +114,14 @@
 				"navigationBarTitleText" : "新开户",
 				"enablePullDownRefresh" : false
 			}
+		},
+		{
+			"path" : "pages/kanlishi/kanlishi",
+			"style" : 
+			{
+				"navigationBarTitleText" : "看历史",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {

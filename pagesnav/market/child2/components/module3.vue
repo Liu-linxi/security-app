@@ -56,7 +56,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="text-center mt-3 gray">
+		<view class="text-center mt-3 gray" @click="todetails">
 			更多 <uni-icons type="right" size="12" class="ml-2" color="#c2c2c2"></uni-icons>
 		</view>
 	</view>
@@ -105,6 +105,11 @@
 			}
 		},
 		methods: {
+			todetails(){
+				uni.navigateTo({
+					url:"/pages/kanlishi/kanlishi"
+				})
+			},
 			changeListDet() {
 				this.listDetail = !this.listDetail;
 			},
