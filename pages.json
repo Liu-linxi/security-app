@@ -131,6 +131,23 @@
 				"enablePullDownRefresh" : false,
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path" : "pages/kaihu/xieyi",
+			"style" : 
+			{
+				"navigationBarTitleText" : "协议内容",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/kaihu/kaihu2",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
