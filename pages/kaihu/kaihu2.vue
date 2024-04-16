@@ -10,6 +10,16 @@
 				</view>
 			</block>
 		</uni-nav-bar>
+		
+		<view class="d-flex row1">
+			<view class="flex-shrink">
+				
+			</view>
+			<view class="flex-shrink">
+				
+			</view>
+		</view>
+		
 	</view>
 </template>
 
