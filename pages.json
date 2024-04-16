@@ -122,6 +122,15 @@
 				"navigationBarTitleText" : "看历史",
 				"enablePullDownRefresh" : false
 			}
+		},
+		{
+			"path" : "pages/kaihu/kaihu1",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

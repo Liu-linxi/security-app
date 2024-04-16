@@ -62,7 +62,7 @@
 					已向{{phone}}发送送验证带哦的环境很好sdjhasuk，阿桑的歌把手机还给
 				</view>
 				<view class="d-flex j-center mt-2">
-					<u-code-input v-model="phonercode" :maxlength="4" :space="0"></u-code-input>
+					<u-code-input v-model="phonercode" :maxlength="4" :space="0" focus @finish="tonext"></u-code-input>
 				</view>
 				<view class="text-right mr-5 red py-2" v-if="showCode" @click="toconfired">
 					收不到验证码？
@@ -84,7 +84,7 @@
 	export default {
 		data() {
 			return {
-				step: 2,
+				step: 1,
 				phone: "1354646",
 				code: "",
 				tipsList: [
@@ -106,10 +106,17 @@
 				showCode: false,
 			}
 		},
-		onLoad() {
-			this.secondeStatt()
-		},
+		onLoad() {},
 		methods: {
+			tonext(){
+				uni.$u.toast("开始验证成功跳转 ")
+				uni.navigateTo({
+					url:"kaihu1"
+				})
+				console.log(12321);
+			},
+			
+			
 			toconfired() {
 				console.log(uni.$u);
 				uni.showModal({
@@ -129,11 +136,13 @@
 			tochange() {
 				if (!this.phone || !this.code) return
 				uni.$u.toast("切换下一个 ")
-				this.step = 2;
 				this.secondeStatt()
+				this.step = 2;
 			},
 			secondeStatt() {
-				clearInterval(timer)
+				console.log(123);
+				if (timer) clearInterval(timer);
+				this.showCode = false;
 				timer = setInterval(() => {
 					if (this.seconed == 1) {
 						this.seconed = 10;
