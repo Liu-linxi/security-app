@@ -2,7 +2,7 @@
 	<view>
 		<uni-nav-bar fixed :border="false" leftWidth="160rpx" rightWidth="160rpx" backgroundColor="#e72f2f" color="#FFFFFF">
 			<block slot="left">
-				<view class="d-flex a-center text-nowrap">
+				<view class="d-flex a-center text-nowrap" @click="tologin">
 					 <uni-icons type="contact" size="28" color="#FFF"></uni-icons>
 					 登录/开户
 				</view>
@@ -37,6 +37,11 @@
 			change(e) {
 				this.$emit("headerChange", e)
 				this.active = e;
+			},
+			tologin(){
+				uni.navigateTo({
+					url:"/pages/login/login"
+				})
 			}
 		}
 	};
