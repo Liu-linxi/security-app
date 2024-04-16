@@ -59,7 +59,7 @@
 			.left{
 				margin: 20rpx 0;
 				width: 2rpx;
-				background-color: #f2f2f2;
+				// background-color: #f2f2f2;
 			}
 			.right{
 				margin-left: 60rpx;
