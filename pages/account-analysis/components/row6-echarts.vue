@@ -1,6 +1,36 @@
 <template>
 	<view class="charts-box">
 		<qiun-data-charts type="radar" :opts="opts" :chartData="chartData" />
+		<view class="data1 line-h-sm">
+			<view class="">
+				盈利能力
+			</view>
+			<u-rate  allowHalf v-model="value" size="14" inactiveColor="#FA3534"></u-rate>
+		</view>
+		<view class="data2 line-h-sm">
+			<view class="">
+				择时能力
+			</view>
+			<u-rate  allowHalf v-model="value" size="14" inactiveColor="#FA3534"></u-rate>
+		</view>
+		<view class="data3 line-h-sm">
+			<view class="">
+				选股能力
+			</view>
+			<u-rate  allowHalf v-model="value" size="14" inactiveColor="#FA3534"></u-rate>
+		</view>
+		<view class="data4 line-h-sm">
+			<view class="">
+				交易纪律
+			</view>
+			<u-rate  allowHalf v-model="value" size="14" inactiveColor="#FA3534"></u-rate>
+		</view>
+		<view class="data5 line-h-sm">
+			<view class="">
+				风控能力
+			</view>
+			<u-rate  allowHalf v-model="value" size="14" inactiveColor="#FA3534"></u-rate>
+		</view>
 	</view>
 </template>
 
@@ -8,6 +38,7 @@
 	export default {
 		data() {
 			return {
+				value:3.5,
 				chartData: {},
 				//您可以通过修改 config-ucharts.js 文件中下标为 ['radar'] 的节点来配置全局默认参数，如都是默认参数，此处可以不传 opts 。实际应用过程中 opts 只需传入与全局默认参数中不一致的【某一个属性】即可实现同类型的图表显示不同的样式，达到页面简洁的需求。
 				opts: {
@@ -74,10 +105,48 @@
 	};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 	/* 请根据实际需求修改父元素尺寸，组件自动识别宽高 */
 	.charts-box {
-		width: 100%;
+		width: 95%;
+		margin: 0 auto;
 		height: 300px;
+		position: relative;
+		.data1{
+			position: absolute; 
+			top: 25rpx;
+			left: 50%;
+			transform: translate(-50% ,0);
+			text-align: center;
+			background-color: #FFFFFF;
+		}
+		.data2{
+			position: absolute;
+			top: 100px;
+			left:-10rpx;
+			text-align: center;
+			background-color: #FFFFFF;
+		}
+		.data3{
+			right: -10rpx;
+			position: absolute;
+			top: 100px;
+			text-align: center;
+			background-color: #FFFFFF;
+		}
+		.data4{
+			position: absolute;
+			bottom: 80rpx;
+			left:50rpx;
+			text-align: center;
+			background-color: #FFFFFF;
+		}
+		.data5{
+			position: absolute;
+			bottom: 80rpx;
+			right:50rpx;
+			text-align: center;
+			background-color: #FFFFFF;
+		}
 	}
 </style>
