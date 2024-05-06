@@ -148,6 +148,13 @@
 				"enablePullDownRefresh" : false,
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path" : "pages/ceshi/ceshi",
+			"style" : 
+			{
+				"navigationBarTitleText" : "测试"
+			}
 		}
 	],
 	"globalStyle": {

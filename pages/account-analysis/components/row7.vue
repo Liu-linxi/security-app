@@ -1,11 +1,11 @@
 <template>
 	<view class="row7">
 		<view class=" bg-white px-4 pb-3">
-			<uni-calendar class="uni-calendar--hook" :selected="selected" :showMonth="false" @change="change" @monthSwitch="monthSwitch" />
-		
+			<!-- <uni-calendar class="uni-calendar--hook" :selected="selected" :showMonth="false" @change="change" @monthSwitch="monthSwitch" /> -->
+			<calendarCpns ref="calend" @getMounth="getMounth" />
 			<view class="d-flex j-sb a-center text-light-muted my-2">
 				<view class="">
-					月累计收益：0。00元
+					{{initMounth}}月累计收益：0.00元
 				</view>
 				<view class="">
 					沪深300:
@@ -16,7 +16,7 @@
 				查看日对账账单<u-icon name="arrow-right-double" class="ml-2"></u-icon>
 			</view>
 		</view>
-		
+
 		<view class="text-light-muted p-3">
 			免责声明：
 			<view class="" style="text-indent: 2em;">
@@ -28,9 +28,11 @@
 
 <script>
 	import uniCalendar from './components/uni-calendar/uni-calendar.vue';
+	import calendarCpns from './calendar-cpns.vue';
 	export default {
 		components: {
-			uniCalendar
+			uniCalendar,
+			calendarCpns
 		},
 		props: ["uniCalendar"],
 		data() {
@@ -38,13 +40,18 @@
 				selected: [{
 					date: "2024-04-11",
 					info: '打卡',
-				}]
+				}],
+				initMounth:new Date().getMonth() + 1,
 			}
 		},
 		mounted() {
 
 		},
 		methods: {
+			getMounth(e) {
+				this.initMounth = e
+			},
+
 			change(e) {
 				console.log('change 返回:', e)
 				// 模拟动态打卡

@@ -18,7 +18,7 @@
 					<text class="uni-calendar__header-text">{{ (nowDate.year||'') +' / '+( nowDate.month||'')}}</text>
 				</picker>
 				<view class="uni-calendar__header-btn-box border ml-1" style="width: 32px;height: 25px;border-radius: 0 20px 20px 0;" @click.stop="next">
-					<view class="uni-calendar__header-btn uni-calendar--right"></view>
+					<view class="uni-calendar__header-btn uni-calendar--right"></view>1
 				</view>
 				<!-- 禁用今日选择 -->
 				<!-- <text class="uni-calendar__backtoday" @click="backToday">{{todayText}}</text> -->
