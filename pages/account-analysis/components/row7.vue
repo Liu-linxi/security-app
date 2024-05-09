@@ -2,6 +2,15 @@
 	<view class="row7">
 		<view class=" bg-white px-4 pb-3">
 			<!-- <uni-calendar class="uni-calendar--hook" :selected="selected" :showMonth="false" @change="change" @monthSwitch="monthSwitch" /> -->
+			<view class="d-flex a-center j-sb py-2">
+				<view class=" font36">
+					我的投资能力<uni-icons type="info" size="20" class="ml-1" color="#ccc"></uni-icons>
+				</view>
+				<view class="gray font-sm d-flex a-center">
+					<uni-icons type="loop" size="16" class="mr-1" color="#c2c2c2"></uni-icons>
+					切换为收益金额
+				</view>
+			</view>
 			<calendarCpns ref="calend" @getMounth="getMounth" />
 			<view class="d-flex j-sb a-center text-light-muted my-2">
 				<view class="">

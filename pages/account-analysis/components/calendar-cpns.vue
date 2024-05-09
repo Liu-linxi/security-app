@@ -1,12 +1,22 @@
 <template>
 	<view class="calendar">
 		<view class="controls">
-			<view class="uni-calendar__header-btn-box border mr-1" style="width: 32px;height: 25px;border-radius:  20px 0 0 20px ;" @click.stop="prevMonth">
-				<view class="uni-calendar__header-btn uni-calendar--left"></view>
+			<view class="d-flex a-center ml-2 banner">
+				<view class="checker">
+					月
+				</view>
+				<view class="px-2">
+					年
+				</view>
 			</view>
-			<view>{{ currentYear }} 年{{ months[currentMonth - 1] }}月</view>
-			<view class="uni-calendar__header-btn-box border ml-1" style="width: 32px;height: 25px;border-radius: 0 20px 20px 0;" @click.stop="nextMonth">
-				<view class="uni-calendar__header-btn uni-calendar--right"></view>
+			<view class="d-flex a-center">
+				<view class="uni-calendar__header-btn-box border mr-1" style="width: 25px;height: 20px;border-radius:  20px 0 0 20px ;" @click.stop="prevMonth">
+					<view class=" uni-calendar-l"></view>
+				</view>
+				<view>{{ currentYear }} 年{{ months[currentMonth - 1] }}月</view>
+				<view class="uni-calendar__header-btn-box border ml-1" style="width: 25px;height: 20px;border-radius: 0 20px 20px 0;" @click.stop="nextMonth">
+					<view class=" uni-calendar-t"></view>
+				</view>
 			</view>
 		</view>
 		<view class="days-header">
@@ -92,13 +102,28 @@
 </script>
 
 <style scoped lang="scss">
+	.banner{
+		border-radius: 30rpx;
+		line-height: 38rpx;
+		background-color: #f6f6f6;
+		color: #909090;
+		border: 6rpx solid #f6f6f6;
+		.checker{
+			background-color: #fff;
+			color: #333;
+			line-height: 38rpx;
+			border-radius: 30rpx;
+			padding:0 30rpx;
+			box-shadow: 2rpx 0rpx 3rpx 1rpx #f6f6f6;
+		}
+	}
 	.calendar {
 		font-family: Arial, sans-serif;
 	}
 
 	.controls {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
 		margin-bottom: 10px;
 		align-items: center;
 	}
@@ -162,5 +187,19 @@
 
 	.uni-calendar--right {
 		transform: rotate(135deg);
+	}
+	.uni-calendar-l{
+		-webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+		clip-path: polygon(100% 0, 0 50%, 100% 100%);
+		background-color: #8e8e8e;
+		width: 18rpx;
+		height: 18rpx;
+	}
+	.uni-calendar-t{
+		-webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+		clip-path: polygon(0 0, 0 100%, 100% 50%);
+		background-color: #8e8e8e;
+		width: 18rpx;
+		height: 18rpx;
 	}
 </style>
