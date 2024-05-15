@@ -1,6 +1,6 @@
 <template>
 	<view class="login1">
-		<uni-nav-bar fixed :border="false" leftText="关闭" title="注册登录" @clickLeft="back" rightWidth="140rpx" backgroundColor="#e72f2f" color="#FFFFFF">
+		<uni-nav-bar :statusBar="true" fixed :border="false" leftText="关闭" title="注册登录" @clickLeft="back" rightWidth="140rpx" backgroundColor="#e72f2f" color="#FFFFFF">
 		</uni-nav-bar>
 		<view class="bg-white px-5 mt-4">
 			<view class="border-bottom d-flex a-center py-2">

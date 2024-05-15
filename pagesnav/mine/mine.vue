@@ -1,6 +1,6 @@
 <template>
 	<view class="mine">
-		<uni-nav-bar v-if="scollTop>0" fixed :border="false" backgroundColor="rgba(231,47,47,1)" color="#FFFFFF" rightIcon="gear" @clickRight="rightClick" :style="{opacity}">
+		<uni-nav-bar :statusBar="true" v-if="scollTop>0" fixed :border="false" backgroundColor="rgba(231,47,47,1)" color="#FFFFFF" rightIcon="gear" @clickRight="rightClick" :style="{opacity}">
 		</uni-nav-bar>
 		<view class="top-0 text-right" v-else>
 			<uni-icons type="gear" size="24" color="#FFF" class="mr-2" @clickRight="rightClick" ></uni-icons>

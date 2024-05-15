@@ -1,6 +1,6 @@
 <template>
 	<view class="kaihu1">
-		<uni-nav-bar fixed :border="false" leftWidth="140rpx" rightWidth="140rpx" backgroundColor="#e72f2f" color="#FFFFFF">
+		<uni-nav-bar :statusBar="true" fixed :border="false" leftWidth="140rpx" rightWidth="140rpx" backgroundColor="#e72f2f" color="#FFFFFF">
 			<view class="center">
 				三方存管
 			</view>

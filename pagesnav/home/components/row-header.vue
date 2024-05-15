@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar fixed :border="false" backgroundColor="#e72f2f" color="#d8d8d8">
+		<uni-nav-bar :statusBar="true" fixed :border="false" backgroundColor="#e72f2f" color="#d8d8d8">
 			<block slot="left">
 				<image src="" class="img" mode=""></image>
 			</block>

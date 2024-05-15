@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar fixed :border="false"  backgroundColor="#e72f2f" color="#FFFFFF">
+		<uni-nav-bar :statusBar="true" fixed :border="false"  backgroundColor="#e72f2f" color="#FFFFFF">
 			<view class="center">
 				<view :class="{opWhite:active==0}"  @click="change(0)">
 					普通交易

@@ -1,6 +1,6 @@
 <template>
 	<view class="trade">
-		<uni-nav-bar fixed :border="false" leftIcon="left" @clickLeft="back" rightWidth="140rpx" backgroundColor="#e72f2f" color="#FFFFFF">
+		<uni-nav-bar :statusBar="true" fixed :border="false" leftIcon="left" @clickLeft="back" rightWidth="140rpx" backgroundColor="#e72f2f" color="#FFFFFF">
 			<view class="center">
 				<view class="text-center">
 					{{list1[list1Index].name}}

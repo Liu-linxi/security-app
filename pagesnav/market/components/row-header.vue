@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar fixed :border="false" leftWidth="140rpx" rightWidth="140rpx" backgroundColor="#e72f2f" color="#FFFFFF">
+		<uni-nav-bar :statusBar="true" fixed :border="false" leftWidth="140rpx" rightWidth="140rpx" backgroundColor="#e72f2f" color="#FFFFFF">
 			<block slot="left">
 				<view class="" v-if="active==1">
 					看资金
