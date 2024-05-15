@@ -21,8 +21,9 @@
 								<view class="">
 									{{name!='自定义'?name:''}}普通账户盈亏
 								</view>
-								<view class="font-big mt-2">
+								<view class="font-bigger font-weight mt-2">
 									10000.00
+									<text class="green font-md ml-2">-1.22%</text>
 								</view>
 								<view class="gray mt-2 font-sm">
 									注：盈亏分析的计算日期截止至上一个交易日
@@ -30,9 +31,9 @@
 							</view>
 							<u-grid border col="4">
 								<u-grid-item v-for="(baseListItem,baseListIndex) in 4" :key="baseListIndex">
-									<view class="text-center">
+									<view class="text-center font32 font-weight">
 										<image src="" style="width: 40rpx;height: 40rpx;" class="bg-red" mode=""></image>
-										<view class="">
+										<view class="" style="color: #b2b2b2;">
 											股票盈亏<uni-icons type="right" size="14" class="ml-1" color="#c2c2c2"></uni-icons>
 										</view>
 										0.00

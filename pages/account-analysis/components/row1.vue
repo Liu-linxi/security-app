@@ -1,8 +1,8 @@
 <template>
 	<view class="row1">
 		<view class="bg-white p-3 border-bottom">
-			<view class="gray">
-				账户资产<uni-icons type="info" size="16"></uni-icons>
+			<view class="gray" style="color: #969696;">
+				账户资产<uni-icons type="info" size="16" color="#969696"></uni-icons>
 			</view>
 			<view class="red font36">
 				10000.00
@@ -20,8 +20,8 @@
 				</view>
 			</view>
 		</uni-transition>
-		<view class="bg-white d-flex j-sa py-1" @click="show=!show">
-			<u-icon :name="show?'arrow-left-double':'arrow-right-double'" color="#c2c2c2" size="28" style=" transform: rotate(90deg);"></u-icon>
+		<view class="bg-white d-flex j-sa py-1" @click="show=!show" style="transform: scaleX(1.4);">
+			<u-icon :name="show?'arrow-left-double':'arrow-right-double'" color="#e4e4e4" size="18" style=" transform: rotate(90deg);"></u-icon>
 		</view>
 
 	</view>
